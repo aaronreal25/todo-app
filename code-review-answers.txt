@@ -1,0 +1,116 @@
+Code Review Questions
+
+1. State Management
+Q: Why did you choose the specific state management approach? How would you scale it for a larger application?
+
+A: The Context API was chosen for this task management application because:
+- The application has a relatively simple state structure that doesn't require complex state management
+- Context provides a clean way to avoid prop drilling without adding external dependencies
+- The application's size and complexity don't warrant the overhead of Redux or other complex state management solutions
+- It's easy to test and mock in unit tests
+- Built into React, reducing bundle size and complexity
+
+For scaling to a larger application, I would:
+- Split the context into smaller, more focused contexts (e.g., separate contexts for tasks, user preferences, etc.)
+- Implement caching strategies for better performance with larger datasets
+- Add a middleware pattern for handling side effects
+- Consider switching to more robust solutions like Redux or Zustand if the application grows significantly
+- Implement proper error boundaries and loading states
+
+2. Performance Optimization
+Q: What techniques did you use to optimize the performance of the application? How do they work?
+
+A: Several performance optimization techniques were implemented:
+
+1. React.memo for Components:
+   - Used to prevent unnecessary re-renders of components when their props haven't changed
+   - Applied to TaskItem and TaskList components
+
+2. Virtualization with react-window:
+   - Implemented to efficiently handle large lists of tasks
+   - Only renders tasks that are currently visible in the viewport
+   - Significantly reduces DOM nodes and improves performance with large datasets
+
+3. useMemo for Expensive Computations:
+   - Used for task filtering operations to prevent unnecessary recalculations
+   - Caches the filtered results until dependencies change
+
+4. useCallback for Event Handlers:
+   - Prevents recreation of function references on each render
+   - Helps prevent unnecessary re-renders of child components
+
+5. Proper Key Usage:
+   - Implemented unique keys for list items to optimize React's reconciliation process
+
+3. Testing Strategy
+Q: How do you decide which parts of the application need to be unit tested? What are your guidelines?
+
+A: My testing strategy follows these guidelines:
+
+1. Core Functionality:
+   - Test all critical user interactions (adding, editing, deleting tasks)
+   - Verify state changes work correctly
+   - Ensure filtering and search functionality works as expected
+
+2. Edge Cases:
+   - Test boundary conditions (empty lists, invalid inputs)
+   - Verify error handling
+   - Test overdue task highlighting
+   - Test filter combinations
+
+3. Component Testing:
+   - Test component rendering
+   - Verify prop changes are handled correctly
+   - Test component interactions
+   - Include snapshot tests for UI consistency
+
+4. Integration Points:
+   - Test context integration
+   - Verify component communication
+   - Test form submissions
+
+5. Coverage Guidelines:
+   - Aim for high coverage of business logic
+   - Focus on user-facing functionality
+   - Test error states and recovery
+   - Include accessibility testing
+
+4. Code Structure
+Q: Explain how you organized your project structure and why.
+
+A: The project structure follows these principles:
+
+1. Component Organization:
+   - Each component has its own directory
+   - Components include the main component file, test file, and any related utilities
+   - Shared components are separated from feature-specific components
+
+2. Context Organization:
+   - TaskContext handles global state management
+   - Keeps state logic separate from UI components
+   - Provides clear interfaces for state updates
+
+3. Type Definitions:
+   - Centralized types directory for shared interfaces
+   - Ensures type consistency across the application
+   - Makes it easy to maintain and update shared types
+
+4. Test Organization:
+   - Tests are co-located with their components
+   - Clear naming conventions for test files
+   - Separate test utilities when needed
+
+5. File Structure:
+   /src
+   ├── app/                 # Next.js app directory
+   ├── components/          # React components
+   ├── context/            # Context API related files
+   ├── types/              # TypeScript type definitions
+   └── __tests__/         # Test files
+
+This organization provides:
+- Clear separation of concerns
+- Easy navigation
+- Scalability for future features
+- Maintainable codebase
+- Logical grouping of related files

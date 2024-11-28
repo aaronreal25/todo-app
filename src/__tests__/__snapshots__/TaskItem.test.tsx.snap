@@ -1,0 +1,297 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskItem Snapshots matches snapshot for completed task 1`] = `
+<div>
+  <div
+    class="task-item p-4 mb-4 border-2 rounded-lg bg-gray-800 border-green-500"
+    data-testid="task-item"
+  >
+    <div
+      class="task-item-header flex justify-between items-center mb-2"
+    >
+      <h3
+        class="task-item-title text-lg font-semibold text-white"
+      >
+        Test Task
+      </h3>
+      <span
+        aria-label="completed"
+        class="task-item-status px-2 py-1 rounded bg-green-900 text-green-100"
+        role="status"
+      >
+        COMPLETED
+      </span>
+    </div>
+    <p
+      class="task-item-description text-gray-300 mb-2"
+    >
+      Test Description
+    </p>
+    <p
+      class="task-item-due-date text-sm text-gray-400"
+    >
+      Due: 
+      Nov 28, 2024
+    </p>
+    <div
+      class="task-item-controls flex justify-between mt-4"
+    >
+      <select
+        class="task-status-select p-2 border rounded bg-gray-700 text-white border-gray-600 focus:border-blue-500 focus:ring-blue-500"
+      >
+        <option
+          value="PENDING"
+        >
+          Pending
+        </option>
+        <option
+          value="IN_PROGRESS"
+        >
+          In Progress
+        </option>
+        <option
+          value="COMPLETED"
+        >
+          Completed
+        </option>
+      </select>
+      <div
+        class="task-item-buttons space-x-2"
+      >
+        <button
+          class="task-edit-button px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          Edit
+        </button>
+        <button
+          class="task-delete-button px-3 py-1 bg-red-600 text-white rounded hover:bg-red-600"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TaskItem Snapshots matches snapshot for in-progress task 1`] = `
+<div>
+  <div
+    class="task-item p-4 mb-4 border-2 rounded-lg bg-gray-800 border-blue-500"
+    data-testid="task-item"
+  >
+    <div
+      class="task-item-header flex justify-between items-center mb-2"
+    >
+      <h3
+        class="task-item-title text-lg font-semibold text-white"
+      >
+        Test Task
+      </h3>
+      <span
+        aria-label="in_progress"
+        class="task-item-status px-2 py-1 rounded bg-blue-900 text-blue-100"
+        role="status"
+      >
+        IN PROGRESS
+      </span>
+    </div>
+    <p
+      class="task-item-description text-gray-300 mb-2"
+    >
+      Test Description
+    </p>
+    <p
+      class="task-item-due-date text-sm text-gray-400"
+    >
+      Due: 
+      Nov 28, 2024
+    </p>
+    <div
+      class="task-item-controls flex justify-between mt-4"
+    >
+      <select
+        class="task-status-select p-2 border rounded bg-gray-700 text-white border-gray-600 focus:border-blue-500 focus:ring-blue-500"
+      >
+        <option
+          value="PENDING"
+        >
+          Pending
+        </option>
+        <option
+          value="IN_PROGRESS"
+        >
+          In Progress
+        </option>
+        <option
+          value="COMPLETED"
+        >
+          Completed
+        </option>
+      </select>
+      <div
+        class="task-item-buttons space-x-2"
+      >
+        <button
+          class="task-edit-button px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          Edit
+        </button>
+        <button
+          class="task-delete-button px-3 py-1 bg-red-600 text-white rounded hover:bg-red-600"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TaskItem Snapshots matches snapshot for overdue task 1`] = `
+<div>
+  <div
+    class="task-item p-4 mb-4 border-2 rounded-lg bg-gray-800 border-red-500"
+    data-testid="task-item"
+  >
+    <div
+      class="task-item-header flex justify-between items-center mb-2"
+    >
+      <h3
+        class="task-item-title text-lg font-semibold text-white"
+      >
+        Test Task
+      </h3>
+      <span
+        aria-label="pending"
+        class="task-item-status px-2 py-1 rounded bg-yellow-900 text-yellow-100"
+        role="status"
+      >
+        PENDING
+      </span>
+    </div>
+    <p
+      class="task-item-description text-gray-300 mb-2"
+    >
+      Test Description
+    </p>
+    <p
+      class="task-item-due-date text-sm text-red-400 font-semibold"
+    >
+      Due: 
+      Nov 27, 2024
+    </p>
+    <div
+      class="task-item-controls flex justify-between mt-4"
+    >
+      <select
+        class="task-status-select p-2 border rounded bg-gray-700 text-white border-gray-600 focus:border-blue-500 focus:ring-blue-500"
+      >
+        <option
+          value="PENDING"
+        >
+          Pending
+        </option>
+        <option
+          value="IN_PROGRESS"
+        >
+          In Progress
+        </option>
+        <option
+          value="COMPLETED"
+        >
+          Completed
+        </option>
+      </select>
+      <div
+        class="task-item-buttons space-x-2"
+      >
+        <button
+          class="task-edit-button px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          Edit
+        </button>
+        <button
+          class="task-delete-button px-3 py-1 bg-red-600 text-white rounded hover:bg-red-600"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TaskItem Snapshots matches snapshot for pending task 1`] = `
+<div>
+  <div
+    class="task-item p-4 mb-4 border-2 rounded-lg bg-gray-800 border-yellow-500"
+    data-testid="task-item"
+  >
+    <div
+      class="task-item-header flex justify-between items-center mb-2"
+    >
+      <h3
+        class="task-item-title text-lg font-semibold text-white"
+      >
+        Test Task
+      </h3>
+      <span
+        aria-label="pending"
+        class="task-item-status px-2 py-1 rounded bg-yellow-900 text-yellow-100"
+        role="status"
+      >
+        PENDING
+      </span>
+    </div>
+    <p
+      class="task-item-description text-gray-300 mb-2"
+    >
+      Test Description
+    </p>
+    <p
+      class="task-item-due-date text-sm text-gray-400"
+    >
+      Due: 
+      Nov 28, 2024
+    </p>
+    <div
+      class="task-item-controls flex justify-between mt-4"
+    >
+      <select
+        class="task-status-select p-2 border rounded bg-gray-700 text-white border-gray-600 focus:border-blue-500 focus:ring-blue-500"
+      >
+        <option
+          value="PENDING"
+        >
+          Pending
+        </option>
+        <option
+          value="IN_PROGRESS"
+        >
+          In Progress
+        </option>
+        <option
+          value="COMPLETED"
+        >
+          Completed
+        </option>
+      </select>
+      <div
+        class="task-item-buttons space-x-2"
+      >
+        <button
+          class="task-edit-button px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          Edit
+        </button>
+        <button
+          class="task-delete-button px-3 py-1 bg-red-600 text-white rounded hover:bg-red-600"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
